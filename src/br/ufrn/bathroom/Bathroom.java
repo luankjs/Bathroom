@@ -64,6 +64,7 @@ public class Bathroom {
 	        count++;
 		}
 		
+		executor.shutdown();
 		System.out.println("Banheiro fechado para limpeza!");
 	}
 	
