@@ -69,10 +69,6 @@ public class Bathroom {
 	}
 	
 	private static boolean canEntry(Person person, ThreadPoolExecutor executor) {
-		if ((executor.getActiveCount() == 0) || (person.gender == person.bathroom.gender)) {
-			return true;
-		} else {
-			return false;
-		}
+		return (executor.getActiveCount() == 0) || (person.gender == person.bathroom.gender);
 	}
 }
